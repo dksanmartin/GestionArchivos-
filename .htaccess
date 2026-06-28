@@ -1,49 +1,7 @@
-# ======================================================
-# SISTEMA DE GESTIÓN SEGURA DE ARCHIVOS 
-# Protección de la carpeta de archivos
-# ======================================================
-
-# No mostrar el contenido del directorio
 Options -Indexes
 
-# Bloquear la ejecución de archivos peligrosos
 <FilesMatch "\.(php|php3|php4|php5|php7|php8|phtml|phar|cgi|pl|py|sh|exe|bat|cmd)$">
     Require all denied
 </FilesMatch>
 
-# Tratar archivos peligrosos como texto
 AddType text/plain .php .php3 .php4 .php5 .php7 .php8 .phtml .phar .cgi .pl .py .sh .exe .bat .cmd
-
-# Proteger archivos ocultos
-<FilesMatch "^\.">
-    Require all denied
-</FilesMatch>
-
-# Ignorar listado del directorio
-IndexIgnore *
-
-# Bloquear acceso a archivos de configuración
-<Files "composer.json">
-    Require all denied
-</Files>
-
-<Files "composer.lock">
-    Require all denied
-</Files>
-
-<Files ".env">
-    Require all denied
-</Files>
-
-# Cabeceras de seguridad (si Apache las soporta)
-<IfModule mod_headers.c>
-
-    Header always set X-Content-Type-Options "nosniff"
-
-    Header always set X-Frame-Options "SAMEORIGIN"
-
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
-
-    Header always set X-XSS-Protection "1; mode=block"
-
-</IfModule> 
