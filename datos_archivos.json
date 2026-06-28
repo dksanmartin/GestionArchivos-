@@ -1,0 +1,30 @@
+[
+    {
+        "titulo": "Alumno",
+        "descripcion": "2026",
+        "nombre": "archivo_20260627_164905.png",
+        "nombre_original": "Alumno.jpg",
+        "tamano": 255.24,
+        "tipo": "PNG",
+        "fecha": "27\/06\/2026 16:49:05"
+    },
+    {
+        "titulo": "Ecuador1233",
+        "descripcion": "Ecuador202612345",
+        "nombre": "archivo_20260627_172406.jpg",
+        "nombre_original": "ChatGPT Image 21 may 2026, 22_42_57.png",
+        "tamano": 1573.16,
+        "tipo": "JPG",
+        "fecha": "27\/06\/2026 17:24:06"
+    },
+    {
+        "titulo": "Messi",
+        "descripcion": "Messi mañana",
+        "nombre": "archivo_20260627_164842.jpg",
+        "nombre_original": "index_php_codigo.pdf",
+        "tamano": 19.86,
+        "tipo": "JPG",
+        "fecha": "27\/06\/2026 16:48:42",
+        "password_hash": "$2y$10$Jq05ZF7rx9mDbo5AosLg.esSABhbjdd\/D72WVQPEyPRWfBi6Lhdjm"
+    }
+]
