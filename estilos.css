@@ -1,0 +1,673 @@
+/* =========================================================
+   SISTEMA DE GESTIÓN SEGURA DE ARCHIVOS
+   DISEÑO MODERNO Y PROFESIONAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.35), transparent 30%),
+        radial-gradient(circle at top right, rgba(124, 58, 237, 0.30), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.25), transparent 35%),
+        linear-gradient(135deg, #eef2ff, #f8fafc, #e0f2fe);
+    color: #1e293b;
+}
+
+/* =========================================================
+   ENCABEZADO PRINCIPAL
+========================================================= */
+
+.hero-header {
+    background:
+        linear-gradient(135deg, #0f172a 0%, #1d4ed8 45%, #7c3aed 100%);
+    color: white;
+    padding: 48px 0;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-header::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    top: -90px;
+    right: -70px;
+}
+
+.hero-header::after {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background: rgba(34, 197, 94, 0.18);
+    bottom: -80px;
+    left: -50px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.etiqueta-superior {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 0.4px;
+    backdrop-filter: blur(8px);
+}
+
+.hero-header h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.hero-header p {
+    font-size: 18px;
+    opacity: 0.95;
+    max-width: 760px;
+    margin-bottom: 0;
+}
+
+.hero-icon {
+    width: 115px;
+    height: 115px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.17);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 58px;
+    box-shadow:
+        inset 0 0 25px rgba(255, 255, 255, 0.20),
+        0 18px 35px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(8px);
+}
+
+/* =========================================================
+   MENÚ DE NAVEGACIÓN
+========================================================= */
+
+.menu-moderno {
+    background: #0f172a !important;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.28);
+}
+
+.menu-moderno .container {
+    gap: 10px;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 800;
+    margin-right: 22px;
+    transition: 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #38bdf8 !important;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   CONTENIDO GENERAL
+========================================================= */
+
+.contenido-principal {
+    margin-top: 38px;
+}
+
+/* =========================================================
+   TARJETAS PRINCIPALES
+========================================================= */
+
+.tarjeta-principal {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 28px;
+    padding: 34px;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.16);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    animation: aparecer 0.65s ease;
+    backdrop-filter: blur(10px);
+}
+
+.titulo-tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.titulo-tarjeta h2 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 7px;
+}
+
+.titulo-tarjeta p {
+    margin-bottom: 0;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.badge-modern {
+    display: inline-block;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 40px;
+    font-weight: 900;
+    white-space: nowrap;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+} 
+
+/* =========================================================
+   FORMULARIOS
+========================================================= */
+
+.form-label {
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.campo-moderno,
+.form-select {
+    border-radius: 16px;
+    border: 2px solid #bfdbfe;
+    padding: 13px 16px;
+    background: #f8fafc;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.campo-moderno:focus,
+.form-select:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.18);
+    background: white;
+}
+
+/* =========================================================
+   CAJA DE SUBIDA DE ARCHIVOS
+========================================================= */
+
+.upload-box {
+    border: 3px dashed #60a5fa;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.upload-box:hover {
+    border-color: #7c3aed;
+    background: linear-gradient(135deg, #e0f2fe, #ede9fe);
+    transform: translateY(-3px);
+}
+
+.upload-box i {
+    font-size: 52px;
+    color: #2563eb;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.campo-archivo {
+    max-width: 580px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 12px;
+}
+
+.upload-box p {
+    color: #475569;
+    font-weight: 700;
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   CAJA DE SEGURIDAD
+========================================================= */
+
+.seguridad-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #ecfeff, #eef2ff);
+    border-left: 7px solid #06b6d4;
+    border-radius: 20px;
+    padding: 18px 20px;
+    font-weight: 700;
+    color: #0f172a;
+    box-shadow: 0 8px 18px rgba(14, 165, 233, 0.12);
+}
+
+.seguridad-box i {
+    font-size: 34px;
+    color: #0891b2;
+}
+
+/* =========================================================
+   BOTONES GENERALES
+========================================================= */
+
+.btn {
+    border-radius: 16px;
+    font-weight: 800;
+    padding: 11px 24px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.botones-formulario {
+    margin-top: 8px;
+}
+
+.btn-continuar {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    min-width: 190px;
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.22);
+}
+
+.btn-continuar:hover {
+    color: white;
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.35);
+}
+
+.btn-cancelar {
+    background: linear-gradient(135deg, #64748b, #334155);
+    color: white;
+    min-width: 170px;
+    box-shadow: 0 10px 22px rgba(51, 65, 85, 0.18);
+}
+
+.btn-cancelar:hover {
+    color: white;
+    box-shadow: 0 14px 30px rgba(51, 65, 85, 0.28);
+}
+
+/* =========================================================
+   TABLA MODERNA
+========================================================= */
+
+.tabla-moderna {
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.tabla-moderna thead tr {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+.tabla-moderna thead th {
+    padding: 16px;
+    text-align: center;
+    border: none;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.tabla-moderna tbody tr {
+    background: white;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.10);
+    transition: 0.3s ease;
+}
+
+.tabla-moderna tbody tr:hover {
+    background: #eff6ff;
+    transform: none;
+}  
+
+.tabla-moderna td {
+    padding: 16px;
+    border: none;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.tabla-moderna tbody td:first-child {
+    border-radius: 16px 0 0 16px;
+}
+
+.tabla-moderna tbody td:last-child {
+    border-radius: 0 16px 16px 0;
+}
+
+/* =========================================================
+   BADGES Y BOTONES DE TABLA
+========================================================= */
+
+.badge {
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.btn-ver {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+}
+
+.btn-descargar {
+    background: linear-gradient(135deg, #16a34a, #059669);
+    color: white;
+}
+
+.btn-eliminar {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.btn-ver:hover,
+.btn-descargar:hover,
+.btn-eliminar:hover {
+    color: white;
+} 
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-moderno {
+    margin-top: 60px;
+    padding: 45px 0;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+.footer-moderno h4 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.footer-moderno p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.lista-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-footer li {
+    padding: 6px 0;
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+.footer-moderno hr {
+    border-color: rgba(255,255,255,.15);
+    margin: 30px 0;
+}
+
+/* =========================================================
+   ALERTAS
+========================================================= */
+
+.alert {
+    border-radius: 18px;
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 12px 25px rgba(0,0,0,.12);
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-content {
+    border: none;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0,0,0,.25);
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-body {
+    padding: 35px;
+}
+
+.modal-footer {
+    border: none;
+    padding-bottom: 25px;
+}
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#2563eb,#7c3aed);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#1d4ed8,#6d28d9);
+}
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+.tarjeta-principal{
+    animation: aparecer .7s ease;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:992px){
+
+.hero-content{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.hero-icon{
+
+margin-top:20px;
+
+}
+
+.titulo-tarjeta{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-header h1{
+
+font-size:30px;
+
+}
+
+.hero-header p{
+
+font-size:16px;
+
+}
+
+.tarjeta-principal{
+
+padding:22px;
+
+}
+
+.navbar-brand{
+
+margin-right:10px;
+font-size:14px;
+
+}
+
+.btn{
+
+width:100%;
+margin-bottom:10px;
+
+}
+
+.tabla-moderna{
+
+font-size:14px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero-header{
+
+padding:35px 0;
+
+}
+
+.hero-icon{
+
+width:85px;
+height:85px;
+font-size:42px;
+
+}
+
+.titulo-tarjeta h2{
+
+font-size:22px;
+
+}
+
+.badge-modern{
+
+font-size:13px;
+padding:8px 15px;
+
+}
+
+.seguridad-box{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+}
+
+/* =========================================================
+   EFECTOS
+========================================================= */
+
+.upload-box,
+.tarjeta-principal,
+.btn,
+.badge-modern,
+.seguridad-box{
+
+transition:.3s;
+
+}
+
+.upload-box:hover{
+
+transform:translateY(-4px);
+
+}
+
+.tarjeta-principal:hover{ 
+    transform: none;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.16);
+} 
+
+.btn:hover{
+    transform: none;
+} 
+
+.badge-editar {
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+#editar .form-label {
+    margin-top: 10px;
+} 
